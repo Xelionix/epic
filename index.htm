@@ -1,4 +1,59 @@
-<h1>Lol bro I know ur IP now</h1>
-<p1>Protecting your IP (Internet Protocol) address is crucial in maintaining online privacy and security. To safeguard your IP from potential theft or exploitation, adopting a combination of proactive measures is essential. First and foremost, invest in a reliable Virtual Private Network (VPN) service. A VPN encrypts your internet connection, making it significantly more challenging for malicious actors to intercept your IP. By masking your true IP and routing your traffic through secure servers, a VPN adds an extra layer of security, particularly when using public Wi-Fi networks. Additionally, avoid clicking on suspicious links or visiting unsecured websites, as these can expose your IP to potential threats. Regularly updating and patching your operating system and applications is equally vital, as outdated software can be exploited by cybercriminals to compromise your IP.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #dvdLogo {
+            position: absolute;
+            width: 100px; /* Adjust the size of the logo as needed */
+            height: 60px; /* Adjust the size of the logo as needed */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
-Furthermore, be cautious about sharing personal information on social media platforms. Limit the visibility of your IP by adjusting privacy settings and refraining from disclosing your location unnecessarily. Implementing a robust firewall on your device acts as another line of defense against unauthorized access and potential IP theft. Regularly monitor your online accounts for any unusual activities and employ strong, unique passwords to prevent unauthorized access. By consistently practicing these precautions, users can significantly reduce the risk of IP theft and enhance their overall cybersecurity posture.</p1>
+<img id="dvdLogo" src="your_image_url_here.png" alt="DVD Logo">
+
+<script>
+    const dvdLogo = document.getElementById('dvdLogo');
+
+    // Set initial position and speed
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let xSpeed = 5;
+    let ySpeed = 5;
+
+    function animate() {
+        // Update position
+        x += xSpeed;
+        y += ySpeed;
+
+        // Check for collisions with walls
+        if (x + dvdLogo.width > window.innerWidth || x < 0) {
+            xSpeed = -xSpeed;
+        }
+
+        if (y + dvdLogo.height > window.innerHeight || y < 0) {
+            ySpeed = -ySpeed;
+        }
+
+        // Update logo position
+        dvdLogo.style.left = x + 'px';
+        dvdLogo.style.top = y + 'px';
+
+        // Repeat the animation
+        requestAnimationFrame(animate);
+    }
+
+    // Start the animation
+    animate();
+</script>
+
+</body>
+</html>
